@@ -1,0 +1,127 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+      google.charts.setOnLoadCallback(drawChart1);
+      google.charts.setOnLoadCallback(drawChart2);
+      google.charts.setOnLoadCallback(drawChart3);
+      google.charts.setOnLoadCallback(drawChart4);
+      google.charts.setOnLoadCallback(drawChart5);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+        ["TAG", "Amount"],
+        ["data structures", 1],
+        ["combinatorics", 1],
+        ["geometry", 2],
+        ["number theory", 2],
+        ["binary search", 3],
+        ["dp", 6],
+        ["sortings", 7],
+        ["constructive algorithms", 9],
+        ["strings", 11],
+        ["brute force", 20],
+        ["greedy", 29], 
+        ["math", 47],
+        ["implementation", 61]
+        ]);
+
+        var options = {
+          title: 'DIV.2 A'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+        data.sort({column: 1, desc : true});
+        chart.draw(data, options);
+      }
+
+      function drawChart1() {
+
+        var data = google.visualization.arrayToDataTable([
+        ["TAG", "Amount"],
+        ["dp",15],["greedy",54],["sortings",19],["math",38],["number theory",9],["constructive algorithms",19],["data structures",8],["binary search",8],["brute force",20],["implementation",51],["strings",11],["ternary search",1],["combinatorics",3],["two pointers",1],["graphs",3],["geometry",2],["dfs and similar",3],["bitmasks",3]
+        ]);
+
+        var options = {
+          title: 'DIV.2 B'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart1'));
+        data.sort({column: 1, desc : true});
+        chart.draw(data, options);
+      }
+
+      function drawChart2() {
+
+        var data = google.visualization.arrayToDataTable([
+        ["TAG", "Amount"],
+        ["binary search",12],["implementation",21],["math",27],["two pointers",6],["constructive algorithms",17],["greedy",28],["sortings",10],["strings",6],["data structures",9],["dfs and similar",7],["dsu",3],["trees",5],["brute force",13],["ternary search",1],["dp",14],["combinatorics",4],["number theory",9],["geometry",4],["meet-in-the-middle",1],["graphs",5],["shortest paths",1],["divide and conquer",1],["games",1]
+        ]);
+
+        var options = {
+          title: 'DIV.2 C'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart2'));
+        data.sort({column: 1, desc : true});
+        chart.draw(data, options);
+      }
+      function drawChart3() {
+
+        var data = google.visualization.arrayToDataTable([
+        ["TAG", "Amount"],
+        ["constructive algorithms",19],["math",21],["binary search",9],["greedy",25],["implementation",24],["brute force",13],["games",3],["graphs",12],["sortings",7],["bitmasks",7],["number theory",6],["dfs and similar",9],["dp",19],["two pointers",6],["divide and conquer",2],["strings",6],["trees",9],["interactive",3],["data structures",11],["hashing",3],["dsu",6],["shortest paths",2],["combinatorics",3],["probabilities",1],["geometry",3],["ternary search",1]
+        ]);
+
+        var options = {
+          title: 'DIV.2 D'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart3'));
+        data.sort({column: 1, desc : true});
+        chart.draw(data, options);
+      }
+      function drawChart4() {
+
+        var data = google.visualization.arrayToDataTable([
+        ["TAG", "Amount"],
+        ["binary search",13],["greedy",13],["math",16],["sortings",7],["ternary search",2],["brute force",14],["dp",25],["constructive algorithms",9],["combinatorics",7],["matrices",3],["dfs and similar",8],["graphs",13],["number theory",7],["shortest paths",6],["bitmasks",6],["data structures",20],["hashing",2],["strings",4],["two pointers",4],["trees",8],["implementation",5],["probabilities",5],["dsu",1],["interactive",4],["string suffix structures",1],["divide and conquer",2],["flows",2],["graph matchings",1],["meet-in-the-middle",1],["geometry",3]
+        ]);
+
+        var options = {
+          title: 'DIV.2 E'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart4'));
+        data.sort({column: 1, desc : true});
+        chart.draw(data, options);
+      }
+      function drawChart5() {
+
+        var data = google.visualization.arrayToDataTable([
+        ["TAG", "Amount"],
+        ["constructive algorithms",6],["interactive",5],["number theory",6],["data structures",19],["dfs and similar",12],["graphs",16],["greedy",8],["implementation",8],["math",9],["sortings",4],["two pointers",1],["dp",14],["trees",9],["divide and conquer",7],["probabilities",5],["shortest paths",3],["binary search",4],["combinatorics",4],["brute force",5],["flows",1],["dsu",4],["bitmasks",6],["2-sat",1],["geometry",1],["hashing",1],["matrices",3],["games",1],["strings",1]
+        ]);
+
+        var options = {
+          title: 'DIV.2 F'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart5'));
+        data.sort({column: 1, desc : true});
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="piechart" style="height: 100vh;"></div>
+    <div id="piechart1" style="height: 100vh;"></div>
+    <div id="piechart2" style="height: 100vh;"></div>
+    <div id="piechart3" style="height: 100vh;"></div>
+    <div id="piechart4" style="height: 100vh;"></div>
+    <div id="piechart5" style="height: 100vh;"></div>
+  </body>
+</html>
